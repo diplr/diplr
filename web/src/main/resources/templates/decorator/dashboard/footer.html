@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<body>
+
+<div th:fragment="scripts">
+    <!-- JS Global Compulsory -->
+    <script type="text/javascript" th:src="@{/assets/unify/plugins/jquery/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/unify/plugins/jquery/jquery-migrate.min.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/unify/plugins/bootstrap/js/bootstrap.min.js}"></script>
+    <!-- JS Implementing Plugins -->
+    <script type="text/javascript" th:src="@{/assets/unify/plugins/back-to-top.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/unify/plugins/smoothScroll.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/unify/plugins/parallax-slider/js/modernizr.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/unify/plugins/parallax-slider/js/jquery.cslider.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/unify/plugins/owl-carousel/owl-carousel/owl.carousel.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/unify/js/plugins/owl-carousel.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/unify/js/plugins/style-switcher.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/unify/js/plugins/parallax-slider.js}"></script>
+    <!-- JS Customization -->
+    <script type="text/javascript" th:src="@{/assets/unify/js/custom.js}"></script>
+    <!-- JS Page Level -->
+    <script type="text/javascript" th:src="@{/assets/unify/js/app.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/js/kraken/kraken.js}"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            App.init();
+            OwlCarousel.initOwlCarousel();
+            StyleSwitcher.initStyleSwitcher();
+            ParallaxSlider.initParallaxSlider();
+            var etheur = {
+                name: 'ETHEUR',
+                result: 'XETHZEUR'
+            };
+            var ethusd = {
+                name: 'ETHUSD',
+                result: 'XETHZUSD'
+            };
+            var ethxbt = {
+                name: 'ETHXBT',
+                result: 'XETHXXBT'
+            };
+            Kraken.fillPrice(etheur, $("#etheur"));
+            Kraken.fillPrice(ethusd, $("#ethusd"));
+            Kraken.fillPrice(ethxbt, $("#ethxbt"));
+        });
+    </script>
+    <!--[if lt IE 9]>
+    <script th:src="@{/assets/unify/plugins/respond.js}"></script>
+    <script th:src="@{/assets/unify/plugins/html5shiv.js}"></script>
+    <script th:src="@{/assets/unify/plugins/placeholder-IE-fixes.js}"></script>
+    <![endif]-->
+
+
+    <div layout:fragment="footer-content" th:remove="tag"></div>
+</div>
+
+<div th:fragment="version1">
+    <!--=== Footer Version 1 ===-->
+    <div class="footer-v1">
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- About -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <h1>
+                            <span class="color-green">K</span><span style="color:white;">armahostage</span>
+                        </h1>
+                        <p>Karmahostage is a company that cares about user-friendly, anonymous and secure
+                        information.</p>
+                    </div><!--/col-md-3-->
+                    <!-- End About -->
+
+                    <!-- Latest -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <div class="posts">
+                            <div class="headline"><h2>Useful Pairs</h2></div>
+                            <ul class="list-unstyled latest-list">
+                                <li>
+                                    <p>ETH/USD</p>
+                                    <small>1 Ether is <span id="ethusd"></span> USD</small>
+                                </li>
+                                <li>
+                                    <p>ETH/EUR</p>
+                                    <small>1 Ether is <span id="etheur"></span> EUR</small>
+                                </li>
+                                <li>
+                                    <p>ETH/XBT</p>
+                                    <small>1 Ether is <span id="ethxbt"></span> Bitcoin</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--/col-md-3-->
+                    <!-- End Latest -->
+
+                    <!-- Link List -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <div class="headline"><h2>Useful Links</h2></div>
+                        <ul class="list-unstyled link-list">
+                            <li><a th:href="@{/}">Home</a><i class="fa fa-angle-right"></i></li>
+                            <li sec:authorize="!isAuthenticated()"><a th:href="@{/login}">Login</a><i class="fa fa-angle-right"></i></li>
+                            <li sec:authorize="!isAuthenticated()"><a th:href="@{/register}">Register</a><i class="fa fa-angle-right"></i></li>
+                            <li sec:authorize="!isAuthenticated()"><a th:href="@{/forgot-password}">Forgot Password</a><i class="fa fa-angle-right"></i></li>
+                            <li><a th:href="@{/tos}">Terms of Service</a><i class="fa fa-angle-right"></i></li>
+                        </ul>
+                    </div><!--/col-md-3-->
+                    <!-- End Link List -->
+
+                    <!-- Address -->
+                    <div class="col-md-3 map-img md-margin-bottom-40">
+                        <div class="headline"><h2>Contact Us</h2></div>
+                        <address class="md-margin-bottom-40">
+                            In the blockchain <br/>
+                            Everywhere <br/>
+                            Email: <a href="mailto:info@cinder.cloud" class="">info@cinder.cloud</a>
+                        </address>
+                    </div><!--/col-md-3-->
+                    <!-- End Address -->
+                </div>
+            </div>
+        </div><!--/footer-->
+
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            2017 &copy; All Rights Reserved.
+                            <a href="#">Terms of Service</a>
+                        </p>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="col-md-6">
+                        <ul class="footer-socials list-inline">
+                            <li>
+                                <a href="https://twitter.com/cindercloudapp" class="tooltips" data-toggle="tooltip" data-placement="top" title=""
+                                   data-original-title="Twitter">
+                                    <i class="fa fa-twitter-square"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Social Links -->
+                </div>
+            </div>
+        </div><!--/copyright-->
+    </div>
+    <!--=== End Footer Version 1 ===-->
+
+</div>
+</body>
+</html>

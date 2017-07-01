@@ -1,6 +1,6 @@
 spring:
     application:
-        name: ZoekUwAannemer
+        name: Diplr
     messages:
         basename: i18n/messages
     thymeleaf:

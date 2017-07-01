@@ -1,0 +1,114 @@
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="decorator/normal/decorator"
+>
+
+<div layout:fragment="header-content">
+    <title>Prijzen | Zoek Uw Aannemer</title>
+    <link rel="stylesheet" th:href="@{/assets/unify/css/pages/page_invoice.css}"/>
+</div>
+
+<div layout:fragment="main-content">
+
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">Facturatie</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="#">Uw bedrijf</a></li>
+                <li class="active"><a th:href="@{/prijzen}">Facturatie</a></li>
+            </ul>
+        </div>
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
+
+    <div th:if="${errorMessage != null}" class="container">
+        <br/>
+        <div class="alert alert-error fade in margin-bottom-40">
+            <span th:text="#{${errorMessage}}"></span>
+        </div>
+    </div>
+
+    <div class="container content">
+        <div class="row invoice-header">
+            <div class="col-xs-6">
+                <h2 class="pull-left">Uw Factuur</h2>
+            </div>
+            <div class="col-xs-6 invoice-numb">
+                <p th:text="'Factuur ' + ${invoice.id} + ' - ' + ${invoice.creationDate}">#123456789</p>
+            </div>
+        </div>
+        <div class="row invoice-info">
+            <div class="col-xs-6">
+                <div class="tag-box tag-box-v3">
+                    <h2>Uw Gegevens</h2>
+                    <ul class="list-unstyled">
+                        <li><strong>Bedrijf:</strong> <span th:text="${company.name}">MR.JOHN</span></li>
+                        <li><strong>BTW-Nummer:</strong> <span th:text="${company.vatNumber}"></span></li>
+                        <li><strong>Adres:</strong></li>
+                        <li><span th:text="${company.street} + ' ' + ${company.streetNumber}"></span></li>
+                        <li><span th:text="${company.postCode} + ' ' + ${company.city}"></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="tag-box tag-box-v3">
+                    <h2>Onze Gegevens:</h2>
+                    <ul class="list-unstyled">
+                        <li><strong>Bedrijf:</strong> QDS Consult Comm. V.</li>
+                        <li><strong>BTW-Nummer:</strong> BE 0540.834.881</li>
+                        <li><strong>Adres:</strong></li>
+                        <li>Iepenstraat 14</li>
+                        <li>9940 Evergem</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default margin-bottom-40">
+            <div class="panel-heading">
+                <h3 class="panel-title">Uw gekozen plan</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped invoice-table">
+                    <thead>
+                    <tr>
+                        <th>Plan</th>
+                        <th>Beschrijving</th>
+                        <th>Prijs</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="invoiceItem : ${invoice.invoiceitems}">
+                        <td th:text="${invoiceItem.productName}">Keyboard</td>
+                        <td th:text="${invoiceItem.productDescription}"></td>
+                        <td>€<span th:text="${invoiceItem.totalAsString}"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+
+        <!--Invoice Footer-->
+        <div class="row">
+            <div class="col-xs-6">
+
+            </div>
+            <div class="col-xs-6 text-right">
+                <ul class="list-unstyled invoice-total-info">
+                    <li><strong>Subtotaal:</strong> €<span th:text="${invoice.priceAsString}">$109365</span></li>
+                    <li><strong>BTW (21%):</strong> €<span th:text="${invoice.vatPriceAsString}">veel</span></li>
+                    <li><strong>Totaal:</strong> €<span th:text="${invoice.totalPriceAsString}">$101486</span></li>
+                </ul>
+            </div>
+        </div>
+        <!--End Invoice Footer-->
+    </div>
+
+</div>
+
+</html>

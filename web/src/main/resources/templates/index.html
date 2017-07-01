@@ -1,0 +1,37 @@
+<!DOCTYPE html >
+<!--[if IE 8]>
+<html lang="en" class="ie8"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="decorator/normal/decorator
+                  > <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="decorator/normal/decorator"
+> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="decorator/normal/decorator"
+> <!--<![endif]-->
+<div layout:fragment="header-content">
+    <title>Creative | Unify - Responsive Website Template</title>
+    <link rel="stylesheet" th:href="@{/assets/unify/css/pages/page_search.css}"/>
+</div>
+
+<body>
+<div layout:fragment="main-content">
+
+    <div th:replace="components/landing :: search-block" th:remove="tag"></div>
+    <div th:replace="components/landing :: hoe-werken-wij" th:remove="tag"></div>
+    <div th:replace="components/landing :: testimonials" th:remove="tag"></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.thymeleaf.org"> <!--<![endif]-->
+
+<div th:replace="decorator/dashboard/head :: version1"></div>
+
+<body>
+
+<div class="wrapper">
+    <div th:include="decorator/dashboard/navigation :: topnav" th:remove="tag"></div>
+    <div layout:fragment="main-content" th:remove="tag"></div>
+</div>
+
+<object th:include="decorator/dashboard/footer :: version1" th:remove="tag"></object>
+<object th:include="decorator/dashboard/footer :: scripts" th:remove="tag"></object>
+
+</body>
+
+</html>

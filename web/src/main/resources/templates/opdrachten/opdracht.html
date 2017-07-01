@@ -1,0 +1,154 @@
+<!DOCTYPE html >
+<!--[if IE 8]>
+<html lang="en" class="ie8"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="decorator/normal/decorator
+                  > <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="decorator/normal/decorator"
+> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="decorator/normal/decorator"
+> <!--<![endif]-->
+<div layout:fragment="header-content">
+    <title>Opdracht | Zoek je vakman</title>
+    <link rel="stylesheet" th:href="@{/assets/unify/css/pages/page_job_inner2.css}" />
+</div>
+
+<body>
+<div layout:fragment="main-content">
+
+    <div class="job-description">
+        <div class="container content">
+            <div class="title-box-v2">
+                <h2 th:text="${opdracht.title}">Job Description</h2>
+            </div>
+            <!-- Left Inner -->
+            <div class="left-inner">
+                <h3 th:text="${opdracht.title}">EA Canada, Inc</h3>
+                <div class="position-top">
+                    <ul class="social-icons social-icons-color">
+                        <li><a class="social_facebook" data-original-title="Facebook" href="#"></a></li>
+                        <li><a class="social_tumblr" data-original-title="Tumblr" href="#"></a></li>
+                        <li><a class="social_twitter" data-original-title="Twitter" href="#"></a></li>
+                    </ul>
+                    <a href="#"><i class="fa fa-print"></i></a>
+                </div>
+                <div class="overflow-h">
+                    <p class="hex">Postcode: <span th:text="${opdracht.postcode}"></span></p>
+                    <div class="star-vote">
+                        <span><a href="#"><span th:text="${statistic.viewCount}">34</span> weergaven</a></span>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="progression">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <!-- Begin Overview -->
+                                <div class="col-sm-6">
+                                    <div class="overview">
+                                        <i class="fa fa-edit"></i>
+                                        <div class="overflow-h">
+                                            <small><b>laatste wijziging:</b></small> <br />
+                                            <small th:text="${opdracht.lastModified}">2,1k</small>
+                                            <div class="progress progress-u progress-xxs">
+                                                <div style="width: 100%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="92" role="progressbar" class="progress-bar progress-bar-u">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Overview -->
+
+                                <!-- Begin Overview -->
+                                <div class="col-sm-6">
+                                    <div class="overview">
+                                        <i class="fa fa-location-arrow"></i>
+                                        <div class="overflow-h">
+                                            <small><b>Postcode:</b></small> <br />
+                                            <small th:text="${opdracht.postcode}">749k</small>
+                                            <div class="progress progress-u progress-xxs">
+                                                <div style="width: 100%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar" class="progress-bar progress-bar-u">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Overview -->
+                            </div>
+
+                            <div class="row">
+                                <!-- Begin Overview -->
+
+                                <!-- End Overview -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+
+                                <div class="col-sm-6">
+                                    <div class="overview">
+                                        <i class="fa fa-eye"></i>
+                                        <div class="overflow-h">
+                                            <small>Weergaven:</small> <br />
+                                            <small th:text="${statistic.viewCount}"> 15,7k</small>
+                                            <div class="progress progress-u progress-xxs">
+                                                <div style="width: 100%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="88" role="progressbar" class="progress-bar progress-bar-u">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Begin Overview -->
+                                <div class="col-sm-6">
+                                    <div class="overview">
+                                        <i class="fa fa-location-arrow"></i>
+                                        <div class="overflow-h">
+                                            <small><b>Postcode:</b></small> <br/>
+                                            <small th:text="${opdracht.postcode}">749k</small>
+                                            <div class="progress progress-u progress-xxs">
+                                                <div style="width: 100%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar" class="progress-bar progress-bar-u">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Overview -->
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <h2>Omschrijving</h2>
+                <p th:text="${opdracht.description}">omscrh</p>
+
+                <hr />
+
+            </div>
+            <!-- End Left Inner -->
+        </div>
+    </div>
+    <!--=== End Job Description ===-->
+
+
+</div>
+</body>
+</html>

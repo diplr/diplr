@@ -1,0 +1,78 @@
+apply plugin: 'org.springframework.boot'
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-netflix:${theSpringCloudNetflixVersion}"
+        mavenBom "io.spring.platform:platform-bom:${theSpringPlatformBomVersion}"
+    }
+}
+
+configurations {
+    compile {
+        exclude module: 'jsr311-api'
+    }
+}
+
+
+dependencies {
+
+    compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+
+    compile group: 'com.squareup.okhttp', name: 'okhttp', version: '2.7.5'
+
+    compile("org.springframework.boot:spring-boot-starter-mail")
+    compile("org.springframework.boot:spring-boot-devtools")
+
+    compile 'org.springframework.cloud:spring-cloud-starter-aws'
+
+    compile("com.amazonaws:aws-java-sdk:1.11.123")
+
+    //data
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.flywaydb:flyway-core")
+    compile("mysql:mysql-connector-java")
+
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
+
+    compile 'nl.stil4m:mollie-api:2.6.2'
+
+    compile 'org.thymeleaf.extras:thymeleaf-extras-springsecurity4:2.1.2.RELEASE'
+
+    compile group: 'net.minidev', name: 'json-smart', version: '2.3'
+
+
+    compile("com.auth0:auth0-spring-security-api:0.3.3")
+    compile("com.auth0:auth0-spring-security-mvc:1.2.3")
+    compile("com.auth0:auth0:0.4.0")
+
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile 'org.assertj:assertj-core:3.4.1'
+    testCompile("com.h2database:h2")
+}
+
+jar {
+    baseName = 'application'
+    version = null
+}
+
+springBoot {
+    executable = true
+}
+
+bootRun {
+    systemProperties System.properties
+    addResources = true
+}
+
+task prepareRelease(type: Copy, dependsOn: bootRepackage) {
+    from 'elasticbeanstalk'
+    into "build/"
+}
+
+
+task doRelease(type: Copy, dependsOn: prepareRelease) {
+    from 'build/libs/application.jar'
+    into "build/"
+}

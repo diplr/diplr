@@ -1,0 +1,56 @@
+<!DOCTYPE html >
+<!--[if IE 8]>
+<html lang="en" class="ie8"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="decorator/normal/decorator
+                  > <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="decorator/normal/decorator"
+> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="decorator/normal/decorator"
+> <!--<![endif]-->
+<div layout:fragment="header-content">
+    <title>Opdracht Plaatsen | Zoek je vakman</title>
+
+    <link rel="stylesheet" th:href="@{/assets/unify/css/pages/page_search_inner.css}" />
+</div>
+
+<body>
+<div layout:fragment="main-content">
+
+    <div class="breadcrumbs breadcrumbs-dark">
+        <div class="container">
+            <h1 class="pull-left">Zoekresultaten</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Opdrachten</a></li>
+                <li class="active">Overzicht</li>
+            </ul>
+        </div>
+    </div>
+
+    <div th:if="${successMessage != null}" class="container">
+        <br />
+        <div class="alert alert-success fade in margin-bottom-40">
+            <span th:text="#{${successMessage}}"></span>
+        </div>
+    </div>
+
+
+    <div th:replace="components/opdrachten :: zoeken" th:remove="tag"></div>
+    <div th:replace="components/opdrachten :: overzicht" th:remove="tag"></div>
+
+</div>
+</body>
+</html>
