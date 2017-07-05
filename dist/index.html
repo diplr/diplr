@@ -1,107 +1,119 @@
-<html>
-  <head>
-    <title>Embark - SimpleStorage Demo</title>
-    <link rel="stylesheet" href="css/app.css">
-    <script src="js/app.js"></script>
-  </head>
-  <body class="container">
-    <h3>Embark - Usage Example</h3>
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
 
-    <ul class="nav nav-tabs" role="tablist" id="myTabs">
-      <li role="presentation" class="active"><a href="#blockchain" aria-controls="blockchain" role="tab" data-toggle="tab">Blockchain</a></li>
-      <li role="presentation"><a href="#storage" aria-controls="storage" role="tab" data-toggle="tab">Decentralized Storage (IPFS)<span class="pull-right" id="status-storage"></a></li>
-      <li role="presentation"><a href="#communication" aria-controls="communication" role="tab" data-toggle="tab">P2P communication (Whisper/Orbit)<span class="pull-right" id="status-communication"></span></a></li>
-    </ul>
+    <head>
+        <meta charset="utf-8" />
+        <title>Metronic Admin Theme #6 | Coming Soon</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="Preview page of Metronic Admin Theme #6 for " name="description" />
+        <meta content="" name="author" />
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+        <link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+        <!-- END GLOBAL MANDATORY STYLES -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN THEME GLOBAL STYLES -->
+        <link href="assets/global/css/components-rounded.min.css" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+        <!-- END THEME GLOBAL STYLES -->
+        <!-- BEGIN PAGE LEVEL STYLES -->
+        <link href="assets/pages/css/coming-soon.min.css" rel="stylesheet" type="text/css" />
+        <!-- END PAGE LEVEL STYLES -->
+        <!-- BEGIN THEME LAYOUT STYLES -->
+        <!-- END THEME LAYOUT STYLES -->
+        <link rel="shortcut icon" href="favicon.ico" /> </head>
+    <!-- END HEAD -->
 
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active" id="blockchain">
-        <h3> 1. Set the value in the blockchain</h3>
-        <div class="form-group form-inline">
-          <input type="text" class="text form-control" value="10">
-          <button class="set btn btn-primary">Set Value</button>
-          <p>Once you set the value, the transaction will need to be mined and then the value will be updated on the blockchain.</p>
+    <body class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 coming-soon-header">
+                    <a class="brand" href="index.html">
+                        <img src="assets/pages/img/logo-big.png" alt="logo" /> </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 coming-soon-content">
+                    <h1>Coming Soon!</h1>
+                    <p> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi vehicula sem ut volutpat. Ut non libero magna fusce condimentum eleifend
+                        enim a feugiat. </p>
+                    <br>
+                    <form class="form-inline" action="#">
+                        <div class="input-group input-group-lg input-large">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                                <button class="btn green" type="button"> Subscribe </button>
+                            </span>
+                        </div>
+                    </form>
+                    <ul class="social-icons margin-top-20">
+                        <li>
+                            <a href="javascript:;" data-original-title="Feed" class="rss"> </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" data-original-title="Facebook" class="facebook"> </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" data-original-title="Twitter" class="twitter"> </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" data-original-title="Goole Plus" class="googleplus"> </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" data-original-title="Pinterest" class="pintrest"> </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" data-original-title="Linkedin" class="linkedin"> </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" data-original-title="Vimeo" class="vimeo"> </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 coming-soon-countdown">
+                    <div id="defaultCountdown"> </div>
+                </div>
+            </div>
+            <!--/end row-->
+            <div class="row">
+                <div class="col-md-12 coming-soon-footer"> 2014 &copy; Metronic. Admin Dashboard Template. </div>
+            </div>
         </div>
+        <!--[if lt IE 9]>
+<script src="assets/global/plugins/respond.min.js"></script>
+<script src="assets/global/plugins/excanvas.min.js"></script> 
+<script src="assets/global/plugins/ie8.fix.min.js"></script> 
+<![endif]-->
+        <!-- BEGIN CORE PLUGINS -->
+        <script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+        <!-- END CORE PLUGINS -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <script src="assets/global/plugins/countdown/jquery.countdown.min.js" type="text/javascript"></script>
+        <script src="assets/global/plugins/backstretch/jquery.backstretch.min.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN THEME GLOBAL SCRIPTS -->
+        <script src="assets/global/scripts/app.min.js" type="text/javascript"></script>
+        <!-- END THEME GLOBAL SCRIPTS -->
+        <!-- BEGIN PAGE LEVEL SCRIPTS -->
+        <script src="assets/pages/scripts/coming-soon.min.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL SCRIPTS -->
+        <!-- BEGIN THEME LAYOUT SCRIPTS -->
+        <!-- END THEME LAYOUT SCRIPTS -->
+    </body>
 
-        <h3> 2. Get the current value</h3>
-        <div class="form-group">
-          <div>
-            current value is <span class="value"></span>
-          </div>
-          <button class="get btn btn-primary">Get Value</button>
-          <p>Click the button to get the current value. The initial value is 100.</p>
-        </div>
-
-        <h3> 3. Contract Calls </h3>
-        <p>Javascript calls being made: </p>
-        <div class="logs">
-        </div>
-      </div>
-      <div role="tabpanel" class="tab-pane" id="storage">
-        <div class="error alert alert-danger" role="alert">The node you are using does not support IPFS. Please ensure <a href="https://github.com/ipfs/js-ipfs-api#cors" target="_blank">CORS</a> is setup for the IPFS node.</div>
-        <div id="storage-controls">
-
-        <h3>Save text to IPFS</h3>
-        <div class="form-group form-inline">
-          <input type="text" class="ipfsText text form-control" value="hello world!">
-          <button class="setIpfsText btn btn-primary">Save</button>
-          <p>generated Hash: <span class="textHash"></span></p>
-        </div>
-
-        <h3>Load text from IPFS given an hash</h3>
-        <div class="form-group form-inline">
-          <input type="text" class="textHash text form-control" size="60">
-          <button class="loadIpfsHash set btn btn-primary">Load</button>
-          <p>result: <span class="ipfsText"></span></p>
-        </div>
-
-        <h3>upload file to ipfs</h3>
-        <div class="form-group form-inline">
-          <input type="file" class="form-control">
-          <button class="uploadFile set btn btn-primary">upload</button>
-          <p>generated hash: <span class="fileIpfsHash"></span></p>
-        </div>
-
-        <h3>Get file or image from ipfs</h3>
-        <div class="form-group form-inline">
-          <input type="text" class="fileIpfsHash form-control" size="60">
-          <button class="loadIpfsFile set btn btn-primary">Load</button>
-          <p>file available at: <span class="ipfsFileUrl"></span></p>
-          <p><img class="ipfsImage" src=""></p>
-        </div>
-
-        <p>Javascript calls being made: </p>
-        <div class="logs">
-          <br> EmbarkJS.Storage.setProvider('ipfs',{server: 'localhost', port: '5001'})
-        </div>
-      </div>
-      </div>
-      <div role="tabpanel" class="tab-pane" id="communication">
-        <div class="error alert alert-danger" role="alert">The node you are using does not support Whisper</div>
-        <div class="errorVersion alert alert-danger" role="alert">The node uses an unsupported version of Whisper</div>
-        <div id="communication-controls">
-        <h3>Listen To channel</h3>
-        <div class="form-group form-inline listen">
-          <input type="text" class="channel text form-control" placeholder="channel">
-          <button class="listenToChannel set btn btn-primary">Start Listening</button>
-          <div id="subscribeList"></div>
-          <p>messages received:<p>
-          <div id="messagesList"></div>
-        </div>
-
-        <h3>Send Message</h3>
-        <div class="form-group form-inline send">
-          <input type="text" class="channel text form-control" placeholder="channel">
-          <input type="text" class="message text form-control" placeholder="message">
-          <button class="sendMessage set btn btn-primary">Send Message</button>
-        </div>
-
-        <p>Javascript calls being made: </p>
-        <div class="logs">
-          <br> EmbarkJS.Messages.setProvider('whisper')
-        </div>
-      </div>
-      </div>
-    </div>
-
-  </body>
 </html>

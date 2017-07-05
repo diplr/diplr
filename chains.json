@@ -7,5 +7,14 @@
       }
     },
     "name": "development"
+  },
+  "0x50bd8a1189776391a62eeac501b718d7ca5455177adcfd2298b2cac8f9122f25": {
+    "contracts": {
+      "0x30660c8f856acba2b5fb2dbcb5a632fd433b1850661723efdf9d886f6d02f9af": {
+        "name": "SimpleStorage",
+        "address": "0x85f3f4af62597f8c2c1a4ad2af9766315c098b77"
+      }
+    },
+    "name": "development"
   }
 }
