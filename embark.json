@@ -1,9 +1,7 @@
 {
   "contracts": ["app/contracts/**"],
   "app": {
-    "js/app.js": ["embark.js"],
-    "index.html": "app/index.html",
-    "landing.html": "app/landing.html" 
+    "js/app.js": ["embark.js"]
     },
   "buildDir": "dist/",
   "config": "config/",
