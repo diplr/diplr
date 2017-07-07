@@ -1,38 +1,51 @@
 var copy = require('copy'); 
 
-//copy template
-copy('app/theme/**/**.js', 'dist', function(err, files){
+//copy application html
+copy('src/**/**.html', 'dist', function(err, files){
   if(err) throw err;
 });
-copy('app/theme/**/**.css', 'dist', function(err, files){
+//copy application js
+copy('src/**/**.js', 'dist', function(err, files){
+  if(err) throw err;
+});
+//copy application png
+copy('src/**/**.png', 'dist', function(err, files){
+  if(err) throw err;
+});
+
+//copy template
+copy('theme/**/**.js', 'dist', function(err, files){
+  if(err) throw err;
+});
+copy('theme/**/**.css', 'dist', function(err, files){
   if(err) throw err;
 });
 
 //theme images
-copy('app/theme/**/**.gif', 'dist', function(err, files){
+copy('theme/**/**.gif', 'dist', function(err, files){
   if(err) throw err;
 });
-copy('app/theme/**/**.png', 'dist', function(err, files){
+copy('theme/**/**.png', 'dist', function(err, files){
   if(err) throw err;
 });
-copy('app/theme/**/**.jpg', 'dist', function(err, files){
+copy('theme/**/**.jpg', 'dist', function(err, files){
   if(err) throw err;
 });
 
 //theme fonts
-copy('app/theme/**/**.woff', 'dist', function(err, files){
+copy('theme/**/**.woff', 'dist', function(err, files){
   if(err) throw err;
 });
-copy('app/theme/**/**.eot', 'dist', function(err, files){
+copy('theme/**/**.eot', 'dist', function(err, files){
   if(err) throw err;
 });
-copy('app/theme/**/**.ttf', 'dist', function(err, files){
+copy('theme/**/**.ttf', 'dist', function(err, files){
   if(err) throw err;
 });
-copy('app/theme/**/**.woff2', 'dist', function(err, files){
+copy('theme/**/**.woff2', 'dist', function(err, files){
   if(err) throw err;
 });
-copy('app/theme/**/**.svg', 'dist', function(err, files){
+copy('theme/**/**.svg', 'dist', function(err, files){
   if(err) throw err;
 });
 
