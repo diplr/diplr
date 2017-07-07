@@ -2,4 +2,5 @@ build/
 *.iml
 .idea/
 **/build/
-dist/**
+dist/
+node_modules/
