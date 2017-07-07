@@ -11,10 +11,10 @@
   "license": "ISC",
   "homepage": "",
   "devDependencies": {
+    "copy": "^0.3.0",
     "copy-dir": "^0.3.0",
     "embark": "^2.5.1",
     "mocha": "^2.2.5"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
