@@ -4,6 +4,8 @@ Diplr - Decentralized Intellectual Property
 ![Logo](app/images/logo.png)
 ### What is diplr? 
 
+# Diplr [![Build Status](https://travis-ci.org/diplr/diplr.svg?branch=master)](https://travis-ci.org/diplr/diplr)
+
 **Diplr is a decentralized platform for intellectual property.**
 
 Diplr will enable everyone with access to the internet to:
