@@ -28,9 +28,9 @@ The reason Diplr can be an entirely decentralized and trustless entity, is becau
 
 All logic is implemented using solidity and deployed as smart contracts on the blockchain. There's no central, nor intermediary server which performs any logic. Central logic is performed on the blockchain and client side logic in the browser using javascript. 
 
-#### IPFS
+#### IPFS / Swarm
 
-The web application that is used as an accesspoint to communicate with the underlying smart contracts will be available on ipfs. Furthermore, all extra data that will be stored, as well 
+The web application that is used as an accesspoint to communicate with the underlying smart contracts will be available on ipfs. Furthermore, all extra data that will be stored, as well as the actual content of IP, should this be necessary, will be stored on either IPFS or swarm. Other storage providers, such as Sia or Storj will be investigated.
 
 ### Testing the application
 
