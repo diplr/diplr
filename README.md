@@ -1,7 +1,7 @@
 Diplr - Decentralized Intellectual Property
 ===
 
-![Logo](app/images/logo.png)
+![Logo](src/images/logo.png)
 ### What is diplr? 
 
 # Diplr [![Build Status](https://travis-ci.org/diplr/diplr.svg?branch=master)](https://travis-ci.org/diplr/diplr)
