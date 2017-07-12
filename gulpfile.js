@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var del = require('del');
 
 var paths = {
-  images: ['src/**/**.png', 'theme/**/**.gif', 'theme/**/**.png', 'theme/**/**.jpg'],
+  images: ['src/**/**.png', 'src/**/**.jpg', 'theme/**/**.gif', 'theme/**/**.png', 'theme/**/**.jpg'],
   scripts: ['src/**/**.js', 'theme/**/**.js'],
   css: ['theme/**/**.css'],
   pages: ['src/**/**.html'],
@@ -16,31 +16,31 @@ gulp.task('clean', function() {
   return del(['dist']);
 });
 
-gulp.task('images', ['clean'], function() {
+gulp.task('images', function() {
   return gulp.src(paths.images)
     // Pass in options to the task
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('fonts', ['clean'], function() {
+gulp.task('fonts', function() {
   return gulp.src(paths.fonts)
     // Pass in options to the task
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('css', ['clean'], function() {
+gulp.task('css', function() {
   return gulp.src(paths.css)
     // Pass in options to the task
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('scripts', ['clean'], function() {
+gulp.task('scripts', function() {
   return gulp.src(paths.scripts)
     // Pass in options to the task
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('pages', ['clean'], function() {
+gulp.task('pages', function() {
   return gulp.src(paths.pages)
     // Pass in options to the task
     .pipe(gulp.dest('dist'));
