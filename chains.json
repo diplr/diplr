@@ -34,5 +34,14 @@
       }
     },
     "name": "development"
+  },
+  "0x440e796d7cc51175f87ee1f76543724d95a9da62ba487cef994420eb16c46a33": {
+    "contracts": {
+      "0x30660c8f856acba2b5fb2dbcb5a632fd433b1850661723efdf9d886f6d02f9af": {
+        "name": "SimpleStorage",
+        "address": "0x739fc0b0d1ac239b63e1c9dd89354fc9e35c50a3"
+      }
+    },
+    "name": "development"
   }
 }
