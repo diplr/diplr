@@ -1,6 +1,6 @@
 build/
-*.iml
-.idea/
-**/build/
-dist/
 node_modules/
+config/kovan/mnemonic
+config/live/mnemonic
+.vscode
+package-lock.json
