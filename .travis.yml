@@ -1,7 +1,23 @@
+sudo: true
 language: node_js
+cache:
+  yarn: true
+  directories:
+  - "$HOME/.npm"
+  - "$HOME/.yarn-cache"
+  - node_modules
 node_js:
-  - "7"
-before_script:
-  - npm install -g gulp-cli
-script: gulp build
-cache: yarn
+  - 6
+compiler:
+- gcc
+- clang
+env:
+- CXX=g++-4.8
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.8
+    - g++-4.8
+    - clang
