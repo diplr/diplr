@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var del = require('del');
 
 var paths = {
-  images: ['src/**/**.png', 'src/**/**.jpg', 'theme/**/**.gif', 'theme/**/**.png', 'theme/**/**.jpg'],
+  images: ['src/**/**.png',  'src/**/**.jpeg', 'src/**/**.jpg', 'theme/**/**.gif', 'theme/**/**.png', 'theme/**/**.jpg'],
   scripts: ['src/**/**.js', 'theme/**/**.js'],
   css: ['theme/**/**.css'],
   pages: ['src/**/**.html'],
