@@ -2,5 +2,6 @@ build/
 node_modules/
 config/kovan/mnemonic
 config/live/mnemonic
+config/ropsten/mnemonic
 .vscode
 package-lock.json

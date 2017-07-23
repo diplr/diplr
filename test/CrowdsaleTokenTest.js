@@ -33,5 +33,26 @@ contract('CrowdsaleToken', function (accounts) {
     });
   });
 
+  it("it should not be possible to upgrade before a crowdsale", function () {
+    return CrowdsaleToken.deployed().then(function (instance) {
+      return instance.canUpgrade();
+    }).then(function (_canUpgrade) {
+      assert.equal(_canUpgrade.valueOf(), false, "We could upgrade, which should not be possible");
+    });
+  });
 
+  it("it should be possible to update Token Information", function () {
+    var meta;
+    return CrowdsaleToken.deployed().then(function (instance) {
+      meta = instance;
+      return meta.setTokenInformation("diplr2", "DIP");
+    }).then(function () {
+      return meta.name.call();
+    }).then(function(_name){
+      assert.equal(_name.valueOf(), "diplr2", "Name was not changed");    
+      return meta.symbol.call();
+    }).then(function(_symbol){
+      assert.equal(_symbol.valueOf(), "DIP", "Symbol was not changed");    
+    });
+  });
 });
